@@ -46,17 +46,20 @@ THEN my session expires, the JWT is invalidated, and I am redirected to the logi
 ```
 
 ## Key Features:
-**User Login and Authentication:**
-    * Users log in through a dedicated login page with username and password fields.
-    * Upon successful authentication, a JWT is generated and stored securely on the client side.
+**Basic Functions:**
+  * User Login: Please use a seeded, premade, user and password listed under 'Example Users'.
+  * Create ticket: A user can create a ticket by clicking the "New Ticket" button.
+  * Edit ticket: A user can click the "Edit" button on a specific ticket to edit all details. 
+  * Delete ticket: Delete a specified ticket.
+  * Filtering: Filter tickets by user.
 
-**Session Management:**
-    * JWTs enable authenticated requests while ensuring user sessions are secure.
-    * Sessions expire after a defined period of inactivity, prompting users to log in again.
+**Example Users:** Use one of the following users to test and use the site.
 
-**Secure Access Control:**
-    * Users attempting to access the Kanban board without authentication are redirected to the login page.
-    * Logging out removes the JWT from local storage and redirects users to the login page.
+| Username      | Password  |
+| ------------- | --------- |
+| JollyGuru     | password  |
+| SunnyScribe   | password  |
+| RadiantComet  | password  |
 
 
 ## Installation
