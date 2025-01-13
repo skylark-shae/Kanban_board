@@ -7,20 +7,25 @@ interface JwtPayload {
 
 export const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
   // TODO: verify the token exists and add the user data to the request object
+  // Complete
   const authHeader = req.headers.authorization;
-  if (authHeader) {
-    const token = authHeader.split(' ')[1];  // Token
-    const secretKey = process.env.JWT_SECRET_KEY || '';  // ENV Secret Key
+  const token = authHeader && authHeader.split(' ')[1];
 
-    jwt.verify(token, secretKey, (err, user) => {
-      if (err) {
-        return res.sendStatus(403);
-      }
+  if (!token) {
+    return res.status(401).json({ message: 'Access denied. No token found.' });
+  }
 
-      req.user = user as JwtPayload;
-      return next();
-    });
-  } else {
-    res.sendStatus(401);
+  try {
+    const secret = process.env.JWT_SECRET as string;
+    const decoded = jwt.verify(token, secret) as JwtPayload;
+
+    req.user = {
+      username: decoded.username
+    };
+
+    return next();
+  } catch (error) {
+    console.log('Error during token verification:', error);
+    return res.status(403).json({ message: 'Access denied. Invalid token.' });
   }
 };

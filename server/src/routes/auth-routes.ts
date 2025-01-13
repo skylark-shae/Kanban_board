@@ -5,27 +5,27 @@ import bcrypt from 'bcrypt';
 
 export const login = async (req: Request, res: Response) => {
   // TODO: If the user exists and the password is correct, return a JWT token
-  const { username, password } = req.body;  // Extract username and password from request body
+  // Complete
+  const { username, password } = req.body;
 
-  const user = await User.findOne({ // Find user by username
-    where: { username },
-  });
+  try {
+    const user = await User.findOne({ where: { username }});
+    if (!user) {
+      return res.status(404).json({ message: 'Invalid username or password.' });
+    }
 
-  // Error handling
-  if (!user) {
-    return res.status(401).json({ message: 'Authentication failed' });
+    const passwordMatch = await bcrypt.compare(password, user.password);
+    if (!passwordMatch) {
+      return res.status(404).json({ message: 'Invalid username or password.' });
+    }
+
+    const token = jwt.sign({ username }, process.env.JWT_SECRET as string, { expiresIn: '1h' });
+
+    return res.status(200).json({ message: 'Login successful', token });
+  } catch (error) {
+    console.log('Error during login:', error);
+    return res.status(500).json({ message: 'Internal server error. Please try again later.' });
   }
-
-  // Password validation
-  const passwordIsValid = await bcrypt.compare(password, user.password);
-  if (!passwordIsValid) {
-    return res.status(401).json({ message: 'Authentication failed' });
-  }
-
-  const secretKey = process.env.JWT_SECRET_KEY || ''; // ENV Secret Key
-
-  const token = jwt.sign({ username }, secretKey, { expiresIn: '1h' }); // Generate token, 1 hrs exp
-  return res.json({ token });
 };
 
 const router = Router();
