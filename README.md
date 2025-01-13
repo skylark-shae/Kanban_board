@@ -46,18 +46,15 @@ THEN my session expires, the JWT is invalidated, and I am redirected to the logi
 ```
 
 ## Key Features:
-1. **User Login and Authentication:**
+**User Login and Authentication:**
     * Users log in through a dedicated login page with username and password fields.
     * Upon successful authentication, a JWT is generated and stored securely on the client side.
 
-2. **Error Handling:**
-    * Invalid login attempts result in clear error messages indicating incorrect credentials.
-
-3. **Session Management:**
+**Session Management:**
     * JWTs enable authenticated requests while ensuring user sessions are secure.
     * Sessions expire after a defined period of inactivity, prompting users to log in again.
 
-4. **Secure Access Control:**
+**Secure Access Control:**
     * Users attempting to access the Kanban board without authentication are redirected to the login page.
     * Logging out removes the JWT from local storage and redirects users to the login page.
 
@@ -68,13 +65,13 @@ This application is deployed using [Render](https://kanban-board-yxnk.onrender.c
 ## Demonstration
 <div style="margin-left: 40px;">
   Demonstration of the application's desktop interface:<br/>
-  <img src="/assets/README-Desktop.gif" alt="Desktop demonstration video" width="550"/>
+  <img src="GIF_kanban.gif" alt="Desktop demonstration video" width="550"/>
 </div>
 <br/>
 
 <div style="margin-left: 40px;">
-  Demonstration of the application's mobile interface:<br/>
-  <img src="/assets/README-Mobile.gif" alt="Mobile demonstration video" width="175"/>
+  Image of the application's desktop interface:<br/>
+  <img src="Screenshot_kanban.png" alt="Screenshot" width="550"/>
 </div>
 <br/>
 
