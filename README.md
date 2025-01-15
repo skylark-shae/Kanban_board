@@ -19,31 +19,29 @@ This project implements a Kanban board application with a secure user authentica
 12. [License](#license)
 
 ## Usage
-## User Story:
+**User Story:**
+  ```md
+  AS A registered user
+  I WANT to authenticate using JSON Web Tokens (JWT)
+  SO THAT I can securely access and manage my tasks on the Kanban board
+  ```
 
-```md
-AS A registered user
-I WANT to authenticate using JSON Web Tokens (JWT)
-SO THAT I can securely access and manage my tasks on the Kanban board
-```
-
-## Acceptance Criteria:
-
-```md
-GIVEN a login page with form inputs for username and password
-WHEN I enter my valid username and password
-THEN I am authenticated using JSON Web Tokens (JWT) and redirected to the main Kanban board page
-WHEN I enter an invalid username or password
-THEN I am presented with an error message indicating that the credentials are incorrect
-WHEN I successfully log in
-THEN a JWT is stored securely in the client's local storage for subsequent authenticated requests
-WHEN I log out
-THEN the JWT is removed from the client's local storage and I am redirected to the login page
-WHEN I try to access the Kanban board page without being authenticated
-THEN I am redirected to the login page
-WHEN I remain inactive for a defined period
-THEN my session expires, the JWT is invalidated, and I am redirected to the login page upon my next action
-```
+**Acceptance Criteria:**
+  ```md
+  GIVEN a login page with form inputs for username and password
+  WHEN I enter my valid username and password
+  THEN I am authenticated using JSON Web Tokens (JWT) and redirected to the main Kanban board page
+  WHEN I enter an invalid username or password
+  THEN I am presented with an error message indicating that the credentials are incorrect
+  WHEN I successfully log in
+  THEN a JWT is stored securely in the client's local storage for subsequent authenticated requests
+  WHEN I log out
+  THEN the JWT is removed from the client's local storage and I am redirected to the login page
+  WHEN I try to access the Kanban board page without being authenticated
+  THEN I am redirected to the login page
+  WHEN I remain inactive for a defined period
+  THEN my session expires, the JWT is invalidated, and I am redirected to the login page upon my next action
+  ```
 
 ## Key Features:
 **Basic Functions:**
@@ -79,14 +77,30 @@ This application is deployed using [Render](https://kanban-board-yxnk.onrender.c
 <br/>
 
 ## Technologies Employed
-* React
-* React-dom
-* React-icons
-* React-scroll
-* React-scripts
-* Web-vitals
-* JavaScript
-* TypeScript
+
+**Frontend:**  
+![React](https://img.shields.io/badge/-React-20232A?logo=react&logoColor=61DAFB) 
+![React DOM](https://img.shields.io/badge/-React%20DOM-61DAFB?logo=react&logoColor=white) 
+![React Icons](https://img.shields.io/badge/-React%20Icons-20232A?logo=react&logoColor=61DAFB)  
+![React Scroll](https://img.shields.io/badge/-React%20Scroll-61DAFB?logo=react&logoColor=white) 
+![React Scripts](https://img.shields.io/badge/-React%20Scripts-61DAFB?logo=react&logoColor=white) 
+![Web Vitals](https://img.shields.io/badge/-Web%20Vitals-20232A?logo=web&logoColor=white) 
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
+
+
+**Backend:**  
+   ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white)
+   ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black) 
+   ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?logo=postgresql&logoColor=white)
+
+
+
+**Authentication:**  
+   ![JSON Web Tokens](https://img.shields.io/badge/-JSON%20Web%20Tokens-000000?logo=jsonwebtokens&logoColor=white)
+
+**Build:**  
+   ![Vite](https://img.shields.io/badge/-Vite-646CFF?logo=vite&logoColor=white)
+   ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
 
 ## Future Development
 I do not plan to make any further developments on this project outside of using it as a learning and rescoure model.
@@ -108,7 +122,6 @@ If you have any questions, please reach out to me at:
 - Email: [skylarkline16@gmail.com](mailto:skylarkline16@gmail.com)
 - GitHub: [skylark-shae](https://github.com/skylark-shae)
 
-
 ## License
 
 This project is licensed under the MIT license.
@@ -118,4 +131,4 @@ The MIT License is a permissive software license originating at the Massachusett
 For more information visit [MIT Licensing](https://choosealicense.com/licenses/mit/).
 
 - - -
-© 2024 Sky-Shae Design. All Rights Reserved.
+© 2025 Sky-Shae Design. All Rights Reserved.
