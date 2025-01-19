@@ -1,4 +1,4 @@
-# [Kanban_board](https://kanban-board-yxnk.onrender.com)
+# [Kanban_board](https://kanbanboard-vpw9.onrender.com)
 
 ## Description
 
@@ -61,7 +61,7 @@ This project implements a Kanban board application with a secure user authentica
 
 
 ## Installation
-This application is deployed using [Render](https://kanban-board-yxnk.onrender.com).
+No installation needed, the application is deployed using [Render](https://kanbanboard-vpw9.onrender.com).
 
 ## Demonstration
 <div style="margin-left: 40px;">
